@@ -1,0 +1,444 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
+  }
+  :root{
+    --Orange-300: #ff8f70;
+    --Red-550: #ff3d54;
+    --Purple-950: #2c2d3f;
+    --Purple-900: #3d3f61;
+    --White: #ffffff;
+    --Gray-600: #4b5862;
+    --Gray-900: #25252d;
+  }
+  .header{
+    background: #FF8F70;
+    background: linear-gradient(90deg, rgba(255, 143, 112, 1) 0%, rgba(255, 61, 84, 1) 50%, rgba(255, 82, 93, 1) 100%);
+    position: relative;
+    color: #fff;
+    padding-bottom: 1rem;
+    border-radius: 5rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  nav{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribute left and right sections */
+    align-items: center;
+  }
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links li {
+    list-style: none;
+    position: relative;
+  }
+  .nav-links li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    min-width: 10rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  .dropdown li a {
+    color: #221d1d;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    display: block;
+  }
+  .dropdown li a:hover {
+    background-color: #f0f0f0;
+  }
+  .nav-links li:hover .dropdown {
+    display: block;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hamburger-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .close-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  .hamburger-icon.hide {
+    display: none;
+  }
+  .close-icon.show {
+    display: block;
+  }
+  .login{
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+  }
+  .login:hover {
+    text-decoration: underline;
+  }
+  .sign-up{
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.5rem;
+    border: solid 1px #ffffff;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+  }
+  .sign-up:hover{
+    background-color: #b1aaaa;
+    border: solid 1px #b1aaaa;
+    color: #fff;
+  }
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px;
+  }
+  .hero h2{
+    font-size: 2.5rem;
+  }
+  .hero-btn{
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .hero-btn button:nth-child(1){
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    outline: none;
+    background: #fff;
+    color: var(--Orange-300);
+    border: 0;
+    cursor: pointer;
+  }
+  .hero-btn button:nth-child(1):hover {
+    background-color: #f0f0f0;
+  }
+  .hero-btn button:nth-child(2){
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    outline: none;
+    color: #fff;
+    border: solid 1px #ffffff;
+    background: transparent;
+    cursor: pointer;
+  }
+  .hero-btn button:nth-child(2):hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .future{
+    padding: 3rem;
+    position: relative;
+  }
+  .future h2{
+    text-align: center;
+  }
+  .div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .left{
+    width: 50%;
+    padding-top: 2rem;
+    margin-right: 2rem;
+    font-size: 16px;
+  }
+  .right{
+    width: 50%;
+    margin-left: 2rem;
+    overflow: hidden;
+  }
+  .left-2 img{
+    margin-right: 7rem;
+    width: 40rem;
+  }
+  .left-2{
+    width: 50%;
+    margin-right: auto;
+    overflow: hidden;
+  }
+  .right-2{
+    width: 50%;
+    padding-top: 2rem;
+    margin-left: 2rem;
+    font-size: 16px;
+  }
+  .footer{
+    background: #25252d;
+    border-radius: 5rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 3rem 0;
+  }
+  .footer ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 5rem;
+  }
+  .footer ul li ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer ul li{
+    list-style: none;
+  }
+  .footer ul li h2{
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  .footer ul li a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer ul li ul li a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer ul li ul li{
+    list-style: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    
+    nav {
+      flex-direction: row; /* Keep items in a row on mobile */
+      justify-content: space-between; /* Logo on left, hamburger on right */
+    }
+    .nav-left {
+      width: auto; /* Adjust width for logo */
+    }
+    .logo {
+      margin-right: 1rem; /* Adjust spacing */
+    }
+    .nav-links {
+      display: none; /* to Hide on mobile initially */
+      flex-direction: column;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      background: rgba(250, 250, 250, 0.95);
+      width: 100%;
+      padding: 2rem;
+      align-items: center;
+      gap: 1.5rem;
+      z-index: 1000;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .nav-links.active li a {
+      color: var(--Purple-950);
+    }
+    .nav-links.active li:hover .dropdown {
+      display: none; /* Disable hover dropdown on mobile */
+    }
+    .nav-links.active .dropdown {
+      display: none; /* Initially hide dropdowns on mobile */
+      position: static;
+      background: transparent;
+      box-shadow: none;
+      padding-left: 1.5rem;
+      width: 100%;
+      align-items: flex-start;
+    }
+    .nav-links.active .dropdown.show-dropdown {
+      display: flex;
+    }
+    .nav-links.active .dropdown li a {
+      color: var(--Gray-600);
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .login, .sign-up {
+      display: none; /* Hide auth buttons on mobile initially */
+    }
+    .hamburger-icon {
+      display: block; /* Show hamburger icon on mobile */
+      color: white;
+    }
+    .close-icon {
+      color: white;
+    }
+    .nav-links.active + .nav-right .login,
+    .nav-links.active + .nav-right .sign-up {
+      display: block; /* Show auth buttons when menu is active */
+    }
+    .nav-links.active + .nav-right .hamburger-icon {
+      display: none; /* Hide hamburger when menu is active */
+    }
+    .nav-links.active + .nav-right .close-icon {
+      display: block; /* Show close icon when menu is active */
+    }
+    /* Stack all main sections */
+    .div,
+    .future,
+    .cta {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+  
+    .left,
+    .right,
+    .left-2,
+    .right-2 {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  
+    .left img,
+    .right img,
+    .left-2 img,
+    .right-2 img {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+  
+    .footer {
+      padding: 3rem 1rem;
+    }
+  
+    .footer ul {
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+    }
+  
+    .footer ul li ul {
+      align-items: center;
+    }
+  
+    /* Add space below headings and paragraphs */
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+  
+    button {
+      margin-top: 1rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .header {
+      border-radius: 2rem;
+    }
+  
+    nav {
+      align-items: center; /* Center items vertically on smaller screens */
+    }
+    .logo {
+      margin-right: 1rem; /* Adjust spacing */
+    }
+    .nav-left {
+      width: auto;
+    }
+  
+    .nav-links {
+      width: 100%;
+    }
+  
+    .nav-links li {
+      text-align: left; /* Align text to the left in the mobile menu */
+    }
+  
+    .nav-links li a {
+      display: block; /* Make links full width for easier tapping */
+      padding: 0.7rem 0;
+    }
+  
+    .nav-right {
+      gap: 0.5rem;
+    }
+    .login, .sign-up {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      padding: 0.6rem 1rem;
+      border-radius: 1rem;
+    }
+  
+    .hero {
+      margin: 30px 10px;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
+    }
+  
+    .future {
+      padding: 1.5rem 1rem;
+    }
+  
+    .left-2 img {
+      width: 100%;
+    }
+  
+    .footer ul li ul {
+      align-items: flex-start; /* Align footer links to the start */
+    }
+  
+    .footer ul li ul li a {
+      font-size: 14px;
+    }
+  
+    .footer ul li h2 {
+      font-size: 18px;
+      text-align: left; /* Align footer headings to the left */
+    }
+  }

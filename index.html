@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+        <div class="nav-left">
+          <a href="#" class="logo">Blogr</a>
+          <ul class="nav-links">
+            <li>
+              <a href="#">Product <span class="dropdown-arrow">▼</span></a>
+              <ul class="dropdown">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Company <span class="dropdown-arrow">▼</span></a>
+              <ul class="dropdown">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Connect <span class="dropdown-arrow">▲</span></a>
+              <ul class="dropdown connect-dropdown">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <a href="#" class="login">Login</a>
+          <a href="#" class="sign-up">Sign Up</a>
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            ☰
+          </div>
+          <div class="close-icon" onclick="toggleMenu()">✕</div>
+        </div>
+      </nav>
+      <div class="hero">
+        <h2>A modern publishing platform</h2>
+        <p>Grow your audience and build your online brand</p>
+        <div class="hero-btn">
+          <button>Start for Free</button>
+          <button>Learn More</button>
+        </div>
+    </header>
+      </div>
+      <div class="div">
+        <div class="left">
+          <img src="images/illustration-editor-desktop.svg" alt="">
+        </div>
+        <div class="right">
+          <h3> Introducing an extensible editor</h3><br>
+          <p>
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+            videos, and Markdown. Extensibility with plugins and themes provide further ways to customize and extend your reach.
+          </p>
+          <br><br>
+          <h3> Robust content management</h3><br>
+          <p>
+            Flexible content management enables easy customization of your blog. Visualize drafts, schedule posts, get feedback
+            and collaborate on content real-time.
+          </p>
+        </div>
+      </div>
+      <div class="future">
+        <h2>Designed for the future</h2>
+        <div class="div">
+          <div class="left-2">
+            <img src="images/illustration-laptop-desktop.svg" alt="">
+          </div>
+          <div class="right-2">
+            <h3> Free, open, simple</h3><br>
+            <p>
+              Blogr is a free and open source application backed by a large community of helpful developers. It supports
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+            <br><br>
+            <h3> Powerful tooling</h3><br>
+            <p>
+              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+              capable of producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <ul>
+          <li>
+            <h2>Blogr</h2>
+          </li>
+          <li>
+            <h2>Product</h2>
+            <ul>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Connect</h2>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <script>
+        function toggleMenu() {
+          const navLinks = document.querySelector(".nav-links");
+          const hamburgerIcon = document.querySelector(".hamburger-icon");
+          const closeIcon = document.querySelector(".close-icon");
+      
+          navLinks.classList.toggle("active");
+          hamburgerIcon.classList.toggle("hide");
+          closeIcon.classList.toggle("show");
+        }
+      
+        const dropdownToggles = document.querySelectorAll('.nav-links > li > a');
+        dropdownToggles.forEach(toggle => {
+          toggle.addEventListener('click', function(e) {
+            if (window.innerWidth < 768) {
+              e.preventDefault(); // Prevent navigation on mobile
+              const dropdown = this.nextElementSibling;
+              if (dropdown && dropdown.classList.contains('dropdown')) {
+                dropdown.classList.toggle('show-dropdown');
+              }
+            }
+          });
+        });
+      </script>
+</body>
+</html>
